@@ -1,4 +1,5 @@
 let isPalindrome = (phrase) => {
+  if (typeof phrase !== 'string') throw new Error('input must be a string');
   if (phrase === '') throw new Error('empty strings are not palindromes');
   if (phrase.trim() === '') return false;
   return phrase === phrase.split('').reverse().join(''); 
@@ -26,6 +27,11 @@ it('error for empty string', () => {
     isPalindrome('');
   }).toThrowError('empty strings are not palindromes');
 });
-it.todo ('error for not a string');
+it('error for not a string', () => {
+  expect(() => {
+    isPalindrome(121);
+  }).toThrowError('input must be a string');
+  
+});
 
 });
