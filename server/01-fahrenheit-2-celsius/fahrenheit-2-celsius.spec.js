@@ -12,7 +12,9 @@ describe('a fahrenheitToCelsius function should', () => {
     expect(fahrenheitToCelsius(32)).toBe(0);
   });
   
-  it.todo('return 10 for 50');
+  it('return 10 for 50', () => {
+    expect(fahrenheitToCelsius(50)).toBe(10);
+  });
   it.todo('return 100 for 212');
   it.todo('return -40 for -40');
   it.todo('return -273.15 for -459.67');
