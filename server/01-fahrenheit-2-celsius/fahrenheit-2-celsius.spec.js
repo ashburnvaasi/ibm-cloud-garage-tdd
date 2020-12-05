@@ -18,6 +18,10 @@ describe('a fahrenheitToCelsius function should', () => {
   it('return 100 for 212', () => {
     expect(fahrenheitToCelsius(212)).toBe(100);
   });
-  it.todo('return -40 for -40');
-  it.todo('return -273.15 for -459.67');
+  it('return -40 for -40', () => {
+    expect(fahrenheitToCelsius(-40)).toBe(-40);
+  });
+  it('return -273.15 for -459.67', () => {
+    expect(fahrenheitToCelsius(-459.67)).toBe(-273.15);
+  });
 });
